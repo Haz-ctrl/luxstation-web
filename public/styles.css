@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /* .hero_section{
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+
+  .slider_tabs input{
+    visibility: hidden;
+    display: none;
+  }
+  .labels{
+    display: flex;;
+    gap: 20px;
+    position:absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  .labels label{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(82, 137, 186);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+.slider_tabs input:nth-child(1):checked ~ .labels label:nth-child(1),
+.slider_tabs input:nth-child(2):checked ~ .labels label:nth-child(2),
+.slider_tabs input:nth-child(3):checked ~ .labels label:nth-child(3){
+    width: 60px;
+    background: rgb(32, 72, 107);
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.hero_content{
+  display: flex;
+  width: 300vw;
+  position: relative;
+  transition: all .5s linear;
+}
+
+.hero_content .hero_box{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.hero_content .hero_box:nth-child(1){
+  background-color:#861657;
+  background-image:linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+}
+.hero_content .hero_box:nth-child(2){
+  background-color: #7f53ac;
+  background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+}
+.hero_content .hero_box:nth-child(3){
+  background-color: #08e1ae;
+  background-image: linear-gradient(315deg, #08e1ae 0%, #98de5b 74%);
+}
+
+.slider_tabs input:nth-child(1):checked ~ .hero_content{
+  left: 0vw;
+}
+.slider_tabs input:nth-child(2):checked ~ .hero_content{
+  left: -100vw;
+}
+.slider_tabs input:nth-child(3):checked ~ .hero_content{
+  left: -200vw;
+}
+.heading_1{
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+.desc{
+  background-color: white;
+  padding: 10px 20px;
+  width: 60%;
+  font-size: 24px;
+} */
+
+nav {
+	position: relative;
+	z-index: 99;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #000;
+	color: #FFF;
+	padding: 1rem 1.5rem;
+}
+
+nav h1 {
+	letter-spacing: 5px;
+	padding: 0.5rem 1rem;
+	padding-right: calc(1rem - 5px);
+	border: 3px solid white;
+}
+
+nav h1:hover {
+	color: crimson;
+}
+
+.menu {
+	display: none;
+	align-items: center;
+	margin: 0 -1rem;
+}
+
+.menu a {
+	margin: 0 1rem;
+	color: white;
+	text-decoration: none;
+	transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.menu a:hover {
+	color: crimson;
+    font-weight: 700;
+}
+
+.hamburger {
+	appearance: none;
+	outline: none;
+	border: none;
+	background: none;
+	cursor: pointer;
+	display: block;
+	width: 2rem;
+	height: 2rem;
+}
+
+.hamburger span {
+	color: #FFF;
+	font-size: 2rem;
+}
+
+.mobile-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 98;
+	padding-top: 6rem;
+	opacity: 0;
+	transform: translateY(-100%);
+	background-color: #000;
+	color: #FFF;
+	transition: 0.3s;
+}
+
+.mobile-menu.is-open {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.mobile-menu a {
+	display: block;
+	padding: 1rem;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.25rem;
+	transition: 0.3s;
+}
+
+.mobile-menu a:hover {
+	color: crimson;
+	background-color: #FFF;
+}
+
+.banner {
+    position: relative;
+    background-image: url('img/hero_images/stock_hero_img_1.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden; /* Hide overflowing shadow */
+    margin-bottom: 20px; /* Add margin to separate from content */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65); /* Adjust the transparency as needed */
+    pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+
+.banner-text {
+    text-align: center;
+    padding: 40px; /* Increased padding within the banner content */
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    padding: 4px; /* Adjust padding as needed */
+}
+
+.banner-text p {
+    font-size: 18px;
+    font-weight: 300;
+    padding: 4px; /* Adjust padding as needed */
+}
+
+.cta-button {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s ease;
+    animation: pulse 2s infinite; /* Add the pulsing animation */
+}
+
+.cta-button:hover {
+    background-color: black;
+    color: white;
+}
+
+#why-choose-us {
+    background-color: #f0f0f0; /* Soft background color */
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+#why-choose-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+#why-choose-us li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.services-btn {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s ease;
+    animation: pulse 2s infinite; /* Add the pulsing animation */
+}
+
+.services-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* || FOOTER STYLES */
+.footer {
+    background-color: #fff;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    margin: 10px 0px;
+}
+
+.social-icons a {
+    color: black;
+    font-size: 30px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: darkblue;
+}
+
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+}
+
+.copyright a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.copyright a:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+/* Define the pulsing animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Initial scale */
+    }
+    50% {
+        transform: scale(1.05); /* Scale up to 1.05 at 50% of the animation */
+    }
+    100% {
+        transform: scale(1); /* Return to the original scale */
+    }
+}
+
+@media (min-width: 768px) {
+	.mobile-menu, .hamburger {
+		display: none;
+	}
+
+	.menu {
+		display: flex;
+	}
+}
+
+/* || RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 80%; /* Make service blocks take more width on smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    #about p, #why-choose-us ul {
+        font-size: 1rem; /* Adjust text size for readability */
+    }
+
+    .testimonials-section {
+        justify-content: center;
+    }
+
+    .testimonial-box {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    #about p, #why-choose-us ul {
+        font-size: 0.9rem;
+    }
+}
