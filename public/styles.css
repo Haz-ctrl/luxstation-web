@@ -221,9 +221,9 @@ nav h1:hover {
 
 .banner {
     position: relative;
-    background-image: url('img/hero_images/stock_hero_img_1.jpeg');
     background-size: cover;
     background-position: center;
+    overflow: hidden;
     height: 700px;
     text-align: center;
     color: white;
@@ -234,6 +234,16 @@ nav h1:hover {
     padding: 20px;
     overflow: hidden; /* Hide overflowing shadow */
     margin-bottom: 20px; /* Add margin to separate from content */
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the video covers the area of the banner without losing its aspect ratio */
+    z-index: -1; /* Ensures the video stays in the background */
 }
 
 .overlay {
