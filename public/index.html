@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -128,6 +126,79 @@
             </div>
         </section>
 
+        <section id="about">
+            <div class="container">
+              <h2 class="about-heading">About Us</h2>
+              <p class="about-text">Your text goes here. This should be something compelling that reflects the ethos of your luxury brand and what sets you apart from the competition.</p>
+              <div class="image-gallery">
+                <!-- Example for one section of images -->
+                <div class="image-section" data-section="1">
+                  <img src="assets/img/hero_images/stock_hero_img_1.jpeg" alt="Description 1" class="gallery-img" data-title="Title 1" data-description="Description 1">
+                  <img src="assets/img/hero_images/stock_hero_img_2.jpeg" alt="Description 2" class="gallery-img" data-title="Title 2" data-description="Description 2">
+                  <img src="assets/img/logo.jpeg" alt="Description 3" class="gallery-img" data-title="Title 3" data-description="Description 3">
+                  <!-- More images if needed -->
+                </div>
+                <!-- Repeat for additional sections with a different data-section value -->
+              </div>
+            </div>
+
+            <!-- Image Viewer Modal -->
+            <div id="imageViewer" class="modal">
+              <span class="close">&times;</span>
+              
+              <div id="caption">
+              </div>
+
+              <a class="prev">&#10094;</a>
+              <img class="modal-content" id="modal-image">
+              <a class="next">&#10095;</a>
+              <div class="image-counter"></div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+              <h2>What Our Clients Say</h2>
+              <div class="testimonials-slider">
+                <div class="testimonial-item">
+                  <p class="testimonial-text">"I've never had a more comfortable and luxurious travel experience. Highly recommend their services!"</p>
+                  <div class="testimonial-author">
+                    <img src="author1.jpg" alt="Client 1" class="testimonial-avatar">
+                    <div class="author-info">
+                      <h4 class="author-name">Jane Doe</h4>
+                      <p class="author-position">CEO, Company Inc.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-item">
+                    <p class="testimonial-text">"Exceptional service and kind staff!"</p>
+                    <div class="testimonial-author">
+                      <img src="author1.jpg" alt="Client 1" class="testimonial-avatar">
+                      <div class="author-info">
+                        <h4 class="author-name">John Doe</h4>
+                        <p class="author-position">CEO, Company Inc.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <p class="testimonial-text">"First time using this service, really enjoyed!"</p>
+                    <div class="testimonial-author">
+                      <img src="author1.jpg" alt="Client 1" class="testimonial-avatar">
+                      <div class="author-info">
+                        <h4 class="author-name">Hashim Iqbal</h4>
+                        <p class="author-position">CEO, Company Inc.</p>
+                      </div>
+                    </div>
+                </div>
+                <!-- Additional testimonials go here -->
+              </div>
+              <div class="slider-controls">
+                <button class="prev-btn">&#10094;</button>
+                <button class="next-btn">&#10095;</button>
+              </div>
+            </div>
+        </section>
+
         <section id="browse-services">
             <div class="banner-text">
                 <h1>Our Services</h1>
@@ -136,6 +207,7 @@
                 <a href="services.html" class="services-btn">Browse services</a>
             </div>
         </section>
+          
     </main>
 
     <footer class="footer">
@@ -145,7 +217,7 @@
         </div>
 
         <div class="copyright">
-            <p>&copy; 2023 Lux Station. All rights reserved.</p>
+            <p>&copy; 2024 Lux Station. All rights reserved.</p>
             <p style="text-align: center;"><a href="./privacy.html">Privacy Policy</a></p>
         </div>
     </footer>

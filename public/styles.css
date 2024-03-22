@@ -138,6 +138,7 @@ nav {
 	color: #FFF;
 	padding: 1rem 1.5rem;
 }
+
 nav h1 {
   position: relative;
   letter-spacing: 5px;
@@ -441,6 +442,363 @@ nav h1 span {
     color: black;
 }
 
+/* About Section */
+#about {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  padding: 50px 20px;
+}
+
+.about-heading {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-img {
+  width: 200px;
+  height: auto;
+  transition: opacity 1s ease;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* Image Viewer Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0,0.9);
+}
+
+#caption {
+  display: block;
+  color: #fff;
+  margin-bottom: 50px; /* Increase space between caption and image */
+}
+
+.modal-content {
+  max-width: 700px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 30px; /* Additional space above the image */
+  animation: zoomIn 0.5s;
+  padding: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Navigation buttons for the modal */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Image counter */
+.image-counter {
+  color: #fff;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  font-size: 12px;
+  transform: translateX(-50%);
+}
+
+/* Modal animations */
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+#testimonials {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#testimonials h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.testimonials-slider {
+  position: relative;
+}
+
+.testimonial-item {
+  display: none; /* Only the active item will be displayed */
+  padding: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.testimonial-item.active {
+  display: block; /* Show active item */
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.author-info {
+  text-align: left;
+}
+
+.author-name {
+  font-weight: bold;
+}
+
+.author-position {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.slider-controls {
+  margin-top: 20px;
+}
+
+.prev-btn, .next-btn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* || SERVICES PAGE STYLES */
+.service-banner, #call-to-action {
+  background: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-banner h2 {
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.service-banner p, #call-to-action p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.service {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.material-icons {
+  font-size: 48px;
+  color: #333;
+}
+
+.service h4 {
+  margin-top: 20px;
+  color: #333;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.service:hover .material-icons {
+  color: #000;
+}
+
+/* || CONTACT PAGE STYLES */
+#contact {
+  text-align: center;
+  background: #fff;
+  padding: 50px 20px;
+}
+
+.contact-heading {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+.contact-text {
+  margin-bottom: 30px;
+  font-size: 1em;
+  color: #555;
+}
+
+.services-panel {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  display: inline-block; /* Align to the center of the section */
+  margin-top: 20px;
+}
+
+.services-heading {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li {
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: #333;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 50px 0;
+  margin-left: 100px;
+  padding: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 70px;
+}
+
+.contact-item i {
+  color: #000;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.contact-item div {
+  text-align: center;
+}
+
+.contact-item h2 {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.contact-item a {
+  display: flex;
+  align-items: center;
+  font-weight: lighter;
+  color: #000;
+}
+
+.contact-item a:hover {
+  color: #555;
+}
+
 /* || FOOTER STYLES */
 .footer {
     background-color: #fff;
@@ -511,7 +869,8 @@ nav h1 span {
 }
 
 /* || RESPONSIVE STYLES */
-@media (max-width: 768px) {
+
+@media only screen and (max-width: 768px) {
     .service-container {
         flex-direction: column;
         align-items: center;
@@ -521,6 +880,10 @@ nav h1 span {
         width: 80%; /* Make service blocks take more width on smaller screens */
     }
 
+    .service-container {
+      grid-template-columns: 1fr;
+    }
+
     h2 {
         font-size: 1.5rem; /* Adjust heading size for smaller screens */
     }
@@ -528,14 +891,57 @@ nav h1 span {
     #about p, #why-choose-us ul {
         font-size: 1rem; /* Adjust text size for readability */
     }
-
-    .testimonials-section {
-        justify-content: center;
+    
+    .about-text {
+      padding: 0 10px;
+    }
+    
+    .modal-content {
+      width: 95%;
+    }
+    
+    .image-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .gallery-img {
+      width: 70px; /* Smaller images on mobile */
+      height: 70px;
     }
 
-    .testimonial-box {
-        flex-basis: 100%;
-        margin-bottom: 20px;
+    .testimonial-author {
+      flex-direction: column;
+    }
+  
+    .testimonial-avatar {
+      margin: 0 auto 10px;
+    }
+  
+    .author-info {
+      text-align: center;
+    }
+
+    .contact-heading {
+      font-size: 2em;
+    }
+  
+    .services-panel {
+      padding: 15px;
+    }
+  
+    .services-heading {
+      font-size: 1.2em;
+    }
+
+    .contact-info {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+    }
+
+    .contact-item {
+        margin-right: 0;
     }
 }
 
