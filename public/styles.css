@@ -401,12 +401,16 @@ nav h1 span {
     color: white;
 }
 
-#why-choose-us {
+#why-choose-us, #our-services{
     background-color: #f0f0f0; /* Soft background color */
     padding: 40px 20px;
     border-radius: 8px;
     margin: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+#why-choose-us h1, #our-services h1 {
+  font-size: 48px;
 }
 
 #why-choose-us ul {
@@ -486,6 +490,223 @@ nav h1 span {
     color: darkblue;
     text-decoration: underline;
 }
+
+#services {
+  background-color: #f0f0f0; /* Apply the grey background to both services and products */
+  padding: 30px 0;
+}
+
+/* Ensure the rest of your CSS is correctly targeting elements within #products as well */
+
+
+#portfolio{
+  padding: 50px 0;
+}
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  color: white;
+}
+.work{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+
+.work img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer{
+  width:auto;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), goldenrod);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+ transition: height 0.5s;
+}
+.layer h3{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer a{
+  margin-top: 20px;
+  color: goldenrod;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img{
+  transform: scale(1.5);
+}
+.work:hover .layer{
+  height: 100%;
+}
+.btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid goldenrod;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+  transition: background 0.5s;
+}
+.btn:hover{
+  background: goldenrod;
+}
+
+/* Become a Client */
+
+#become-client {
+  background-color: goldenrod; /* Soft gray background */
+  padding: 40px 0; /* Ample padding for spacing */
+  text-align: center; /* Centers the text */
+}
+
+#become-client h2 {
+  margin-bottom: 20px; /* Spacing between the heading and paragraph */
+  font-size: 24px; /* Adjust according to your design */
+}
+
+#become-client p {
+  margin-bottom: 20px; /* Spacing before the button */
+  font-size: 18px; /* Adjust according to your design */
+}
+
+#become-client .btn {
+  background-color: black; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  text-decoration: none; /* Removes underline from links */
+  font-weight: bold; /* Makes button text bold */
+  border-radius: 5px; /* Optional: Rounds the corners of the button */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+#become-client .btn:hover {
+  background-color: #333; /* Darker background on hover */
+  color: #fff; /* Adjust as needed */
+}
+/*------OTHER--------*/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about-intro, .team, .mission-vision, .testimonials {
+  padding: 60px 0;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.team-member {
+  flex-basis: calc(33.333% - 20px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.team-member img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* Circular images for team members */
+}
+
+.mission, .vision {
+  margin-bottom: 40px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.carousel-items {
+  display: flex;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-member {
+      flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+      flex-basis: 100%;
+  }
+}
+
 
 /* Define the pulsing animation */
 @keyframes pulse {
