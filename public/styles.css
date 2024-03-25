@@ -799,6 +799,58 @@ nav h1 span {
   color: #555;
 }
 
+.content-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap between contact items and the form as needed */
+}
+
+.contact-items, .contact-form {
+    flex: 1;
+}
+
+.contact-form {
+    padding: 20px; /* Add padding inside the contact form */
+    background-color: #f0f0f0; /* Light gray background */
+    border-radius: 5px; /* Optional: rounds the corners of the contact form */
+}
+
+form label, form input, form textarea {
+    display: block; /* Makes form elements stack vertically */
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50; /* Example button color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .content-flex {
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-items {
+        width: 100%; /* Makes each element take full width on smaller screens */
+    }
+}
+
+
 /* || FOOTER STYLES */
 .footer {
     background-color: #fff;
