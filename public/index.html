@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lux Station</title>
@@ -9,185 +8,209 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-</head>
-
-<body>
-
+  </head>
+  <body>
     <header>
-        <nav>
-            <h1>Lux Station</h1>
-
-            <div class="menu">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
-            </div>
-
-            <button class="hamburger">
-                <span class="material-icons">menu</span>
-            </button>
-        </nav>
-
-        <div class="mobile-menu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </div>
+      <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </header>
-
     <main>
-        <div class="banner">
-            <video class="banner-video" playsinline autoplay muted loop>
-                <source src="assets/vids/Bespoke Concierge Services Demo Video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="overlay"></div>
-            <div class="banner-text">
-                <h1>Welcome</h1>
-                <p>Welcome to the rebranded Lux Station. We are excited to announce a range of new services that we will
-                    be offering to cater all your needs. From personal shopping to concierge services, we are here to
-                    make your life more enjoyable.</p>
-                <a href="contact.html" class="cta-button">Contact us</a>
-            </div>
+      <div class="banner">
+        <video class="banner-video" playsinline autoplay muted loop>
+          <source src="assets/vids/BackgroundVideo.mp4" type="video/mp4"> Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div class="banner-text">
+          <h1>Welcome</h1>
+          <p>Welcome to the rebranded Lux Station. We are excited to announce a range of new services that we will be offering to cater all your needs. From personal shopping to concierge services, we are here to make your life more enjoyable.</p>
+          <a href="contact.html" class="cta-button">Contact us</a>
         </div>
-        <!-- <div class="hero_section">
-            <div class="slider_tabs">
-                <input type="radio" name="slider" id="slider1">
-                <input type="radio" name="slider" id="slider2">
-                <input type="radio" name="slider" id="slider3">
-           
-                <div class="labels">
-                    <label for="slider1"></label>
-                    <label for="slider2"></label>
-                    <label for="slider3"></label>
+        <div class="scroll-indicator">
+          <span class="material-icons">expand_more</span>
+          <!-- Using Google's Material Icons -->
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">
+          <h1>Lux Station</h1>
+        </a>
+        <div class="menu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <button class="hamburger">
+          <span class="material-icons">menu</span>
+        </button>
+      </nav>
+      <!------------ Products --------->
+      <section id="AutoSlider">
+        <h1>Featured Services of the Week</h1>
+        <!-- Swiper -->
+        <div class="swiper-mySwiper">
+          <div class="grid-container">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img src="assets/img/hero_images/stock_hero_img_1.jpeg" alt="">
+                <div class="slide-overlay">
+                  <h3>Title 1</h3>
+                  <a href="#" class="btn">View More</a>
                 </div>
-                <div class="hero_content">
-                    <div class="hero_box slider1_bg">
-                        <div class="content">
-                            <div class="heading_1">Welcome</div>
-                            <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid error repellat ipsum exercitationem. Cumque delectus officiis, perferendis, eaque quasi enim dignissimos reprehenderit quos impedit nulla sint modi fuga deleniti perspiciatis?</p>
-                        </div>
-                    </div>
-                    <div class="hero_box slider2_bg">
-                        <div class="content">
-                            <div class="heading_1">CSS Hero Slider</div>
-                            <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid error repellat ipsum exercitationem. Cumque delectus officiis, perferendis, eaque quasi enim dignissimos reprehenderit quos impedit nulla sint modi fuga deleniti perspiciatis?</p>
-                        </div>
-                    </div>
-                    <div class="hero_box slider3_bg">
-                        <div class="content">
-                            <div class="heading_1">The END</div>
-                            <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid error repellat ipsum exercitationem. Cumque delectus officiis, perferendis, eaque quasi enim dignissimos reprehenderit quos impedit nulla sint modi fuga deleniti perspiciatis?</p>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </div> -->
-
-        <section id="why-choose-us"> 
-            <!-- ---------services---------------- -->
-            <div id="services">
-                <h1 class="sub-title">Why Choose Lux</h1>
-                <div class="services-list">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img src="assets/img/hero_images/stock_hero_img_1.jpeg" alt="">
+                <div class="slide-overlay">
+                  <h3>Title 1</h3>
+                  <a href="#" class="btn">View More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img src="assets/img/hero_images/stock_hero_img_1.jpeg" alt="">
+                <div class="slide-overlay">
+                  <h3>Title 1</h3>
+                  <a href="#" class="btn">View More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img src="assets/img/hero_images/stock_hero_img_1.jpeg" alt="">
+                <div class="slide-overlay">
+                  <h3>Title 1</h3>
+                  <a href="#" class="btn">View More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img src="assets/img/hero_images/stock_hero_img_1.jpeg" alt="">
+                <div class="slide-overlay">
+                  <h3>Title 1</h3>
+                  <a href="#" class="btn">View More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="slide-content">
+                  <img src="assets/img/hero_images/stock_hero_img_1.jpeg" alt="">
+                  <div class="slide-overlay">
+                    <h3>Title 1</h3>
+                    <a href="#" class="btn">View More</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- <button type="button" class="swiper-see-all">See All <i class="fas fa-arrow-right"></i> -->
+        </button>
+      </section>
+      <section id="why-choose-us">
+        <!-- ---------services---------------- -->
+        <div id="services">
+          <h1 class="sub-title">The Lux</h1>
+          <div class="services-list">
+            <div>
+              <h2>Personalised Attention</h2>
+              <p>Over the past few years, I've honed my web development skills through diverse projects, spanning simple static websites to complex eCommerce platforms that seamlessly integrate APIs and frameworks like React. My experience encompasses code refurbishment, building from detailed specifications, and collaborating directly with clients to design and develop websites that align with their unique visions.</p>
+            </div>
+            <div>
+              <h2>Access to Exclusive Experiences</h2>
+              <p> Intuition meets execution in my UI/UX work. Deep user empathy informs pixel-perfect interfaces, crafted with Figma and Adobe XD. I obsess over details, from info flow to subtle animations, ensuring every screen whispers a story that guides users effortlessly. My passion blooms in building bridges between users and technology, crafting joy and making technology sing. </p>
+            </div>
+            <div>
+              <h2>Commitment to Excellence</h2>
+              <p> My fluency in Java and Python empowers me to build diverse programs, balancing effective functionality with elegant, efficient code. I prioritize clarity and structure, ensuring my solutions not only work flawlessly but also remain easily maintainable and future-proof. Leveraging best practices and robust testing, I craft modular programs that optimize performance and stand the test of time. My passion for coding translates into innovative solutions that tackle real-world challenges with both power and purpose. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="become-client">
+        <div class="container">
+          <h2>Interested in becoming a client?</h2>
+          <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+      </section>
+      <section id="testimonials">
+        <div class="container">
+          <h2>Testimonials</h2>
+          <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial">
+                  <p> "I've worked with Lux Station on a number of projects and have always been impressed with their professionalism and the quality of their work. They are responsive, detail-oriented, and deliver on time. I would highly recommend them for any project." </p>
+                  <div class="testimonial-author">
+                    <img src="assets/img/testimonials/testimonial1.jpg" alt="Testimonial 1">
                     <div>
-                        <h2>Personalised Attention</h2>
-                        <p>Over the past few years, I've honed my web development skills through diverse projects,
-                            spanning simple static websites to complex eCommerce
-                            platforms that seamlessly integrate APIs and frameworks like React. My experience
-                            encompasses code refurbishment, building from detailed
-                            specifications, and collaborating directly with clients to design and develop websites that
-                            align with their unique visions.</p>
+                      <h3>John Doe</h3>
+                      <p>CEO, Company Name</p>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial">
+                  <p> "Lux Station has been a pleasure to work with. They are professional, responsive, and deliver high-quality work. I would recommend them to anyone looking for a reliable web development partner." </p>
+                  <div class="testimonial-author">
+                    <img src="assets/img/testimonials/testimonial2.jpg" alt="Testimonial 2">
                     <div>
-                        <h2>Access to Exclusive Experiences</h2>
-                        <p>
-                            Intuition meets execution in my UI/UX work. Deep user empathy informs pixel-perfect
-                            interfaces, crafted with Figma and Adobe XD. I obsess over
-                            details, from info flow to subtle animations, ensuring every screen whispers a story that
-                            guides users effortlessly. My passion blooms in
-                            building bridges between users and technology, crafting joy and making technology sing.
-                        </p>
+                      <h3>Jane Smith</h3>
+                      <p>Marketing Director, Company Name</p>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial">
+                  <p> "I've worked with Lux Station on a number of projects and have always been impressed with their professionalism and the quality of their work. They are responsive, detail-oriented, and deliver on time. I would highly recommend them for any project." </p>
+                  <div class="testimonial-author">
+                    <img src="assets/img/testimonials/testimonial3.jpg" alt="Testimonial 3">
                     <div>
-                        <h2>Commitment to Excellence</h2>
-                        <p>
-                            My fluency in Java and Python empowers me to build diverse programs, balancing effective
-                            functionality with elegant, efficient code.
-                            I prioritize clarity and structure, ensuring my solutions not only work flawlessly but also
-                            remain easily maintainable and future-proof.
-                            Leveraging best practices and robust testing, I craft modular programs that optimize
-                            performance and stand the test of time. My passion
-                            for coding translates into innovative solutions that tackle real-world challenges with both
-                            power and purpose.
-                        </p>
+                      <h3>John Doe</h3>
+                      <p>CEO, Company Name</p>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-
-        <!------------ Products --------->
-        <section id="AutoSlider">
-            <h1>Our Services</h1>
-            <div class="slider">
-                <div class="slide-track">
-                    <div class="slide">
-                        <img src="assets/img/hero_images/stock_hero_img_1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/hero_images/stock_hero_img_3.jpeg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/hero_images/stock_hero_img_2.jpeg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/hero_images/stock_hero_img_1.jpeg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/hero_images/stock_hero_img_2.jpeg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/hero_images/stock_hero_img_3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/hero_images/stock_hero_img_2.jpeg" alt="">
-                </div>
-                    <div class="slide">
-                        <img src="assets/img/hero_images/stock_hero_img_3.jpeg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/hero_images/stock_hero_img_2.jpeg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/hero_images/stock_hero_img_3.jpeg" alt="">
-                    </div>
-
-
-            </div>
-        </section>
-        <section id="become-client">
-            <div class="container">
-                <h2>Interested in becoming a client?</h2>
-                <a href="contact.html" class="btn">Contact Us</a>
-            </div>
-        </section>
+            <div class="swiper-pagination"></div>
+          </div>
+      </section>
     </main>
-
     <footer class="footer">
-        <div class="social-icons">
-            <a href="" target="_blank" class="icon"><i class="fab fa-facebook"></i></a>
-            <a href="" class="icon"><i class="fas fa-envelope"></i></a>
-        </div>
-
-        <div class="copyright">
-            <p>&copy; 2023 Lux Station. All rights reserved.</p>
-            <p style="text-align: center;"><a href="./privacy.html">Privacy Policy</a></p>
-        </div>
+      <div class="social-icons">
+        <a href="" target="_blank" class="icon">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="" class="icon">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Lux Station. All rights reserved.</p>
+        <p style="text-align: center;">
+          <a href="./privacy.html">Privacy Policy</a>
+        </p>
+      </div>
     </footer>
-
-    <script src="script.js"></script>
-</body>
-
+    <script src="script2.js"></script>
+  </body>
 </html>
