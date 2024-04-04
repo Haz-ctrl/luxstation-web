@@ -9,6 +9,78 @@ body{
 a{
     text-decoration: none;
 }
+
+nav {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    padding: 1rem 1.5rem;
+  }
+  
+  nav h1 {
+    text-decoration: none !important;
+    color: white;
+    position: relative;
+    letter-spacing: 5px;
+    padding: 0.5rem 1rem;
+    padding-right: calc(1rem - 5px);
+    overflow: hidden; /* Ensures that parts of the pseudo-elements are not visible outside the boundaries of the h1 element */
+    transition: color 0.3s ease; /* Smooth transition for the color change */
+  }
+  
+  /* Create the initial state of the borders as pseudo-elements */
+  nav h1::before,
+  nav h1::after,
+  nav h1 span::before,
+  nav h1 span::after {
+    content: '';
+    position: absolute;
+    background: gold; /* Gold color for the animated border */
+    transition: all 0.3s ease;
+  }
+  
+  /* Top and bottom borders */
+  nav h1::before, nav h1::after {
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 0; /* Start with 0 width */
+  }
+  
+  nav h1::before { top: 0; }
+  nav h1::after { bottom: 0; }
+  
+  /* Left and right borders */
+  nav h1 span::before,
+  nav h1 span::after {
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    height: 0; /* Start with 0 height */
+  }
+  
+  nav h1 span::before { left: 0; }
+  nav h1 span::after { right: 0; }
+  
+  /* Hover states to "draw" the borders */
+  nav h1:hover::before, nav h1:hover::after {
+    width: 100%; /* Expand the width to the full width */
+  }
+  
+  nav h1:hover span::before,
+  nav h1:hover span::after {
+    height: 100%; /* Expand the height to the full height */
+  }
+  
+  nav h1 span {
+    position: relative; /* Establish a stacking context for the span pseudo-elements */
+    display: block; /* Make span behave as block to support absolute positioning of its pseudo-elements */
+  }
 header{
     width: 1140px;
     max-width: 80%;
