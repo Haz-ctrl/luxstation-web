@@ -962,19 +962,20 @@ body, .container {
   text-align: center;
   margin: 10px 0; /* Space between elements inside overlay */
 }
-
 .btn {
   text-decoration: none;
-  background: #007bff;
-  color: #ffffff;
+  background: #000;
+  color: goldenrod;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: goldenrod;
+  color: #000;
 }
+
 
 
 
