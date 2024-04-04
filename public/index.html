@@ -50,6 +50,7 @@
           <span class="material-icons">menu</span>
         </button>
       </nav>
+      
       <!------------ Products --------->
       <section id="AutoSlider">
         <h1>Featured Services</h1>
@@ -208,5 +209,20 @@
       </div>
   </footer>
     <script src="script2.js"></script>
+    <script>            document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+          document.querySelector("#preloader h2").style.opacity = 1;
+      }, 500); // Fades in the subtitle after 500ms
+
+      setTimeout(function() {
+          document.querySelector("#preloader").classList.add("slide-up");
+          document.querySelector("#content").style.display = "block";
+      }, 2500); // Waits 2 seconds to slide up the preloader and show content
+
+      // Listen for the end of the slide-up animation, then hide or remove the preloader
+      document.querySelector("#preloader").addEventListener('animationend', function() {
+          this.style.display = 'none';
+      });
+  });</script>
   </body>
 </html>
