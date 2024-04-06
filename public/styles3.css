@@ -138,7 +138,7 @@ header a{
     line-height: 1.3em;
 }
 .carousel .list .item .topic{
-    color: #f1683a;
+    color: goldenrod;
 }
 .carousel .list .item .buttons{
     display: grid;
