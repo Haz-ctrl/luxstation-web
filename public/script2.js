@@ -18,6 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollIndicator = document.getElementById('scrollIndicator');
+  scrollIndicator.addEventListener('click', () => {
+      // Scrolls the page down by the height of the window
+      window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', () => {
+      const videoHeight = document.querySelector('.banner-video').offsetHeight;
+      if (window.scrollY > videoHeight) {
+          scrollIndicator.style.display = 'none'; // Hide the button
+      } else {
+          scrollIndicator.style.display = ''; // Show the button again if scrolled back up
+      }
+  });
+});
+
 window.onscroll = function() {makeSticky()};
 
 var navbar = document.querySelector('nav');

@@ -88,4 +88,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Show the first card initially
   showCard(currentIndex);
-})
+});

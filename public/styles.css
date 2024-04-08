@@ -42,8 +42,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #FFF;
+  background-color: black;
   padding: 1rem 1.5rem;
 }
 
@@ -254,6 +253,7 @@ nav h1 span {
   z-index: 10; /* Ensure it's above the overlay and video */
   padding: 0 20px; /* Right padding might need adjustment */
 }
+
 .banner {
     position: relative;
     width: 100%;
@@ -315,15 +315,16 @@ body, .container {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.65); /* Adjust the transparency as needed */
     pointer-events: none; /* Allow clicks to pass through the overlay */
+    z-index: 1000;
 }
 
 .banner-text {
-    text-align: center;
+    text-align: right;
     padding: 40px; /* Increased padding within the banner content */
     margin: 20px auto;
     max-width: 600px;
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    z-index: 1001;
 }
 
 .banner-text h1 {
@@ -431,8 +432,16 @@ body, .container {
     transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
+.snapchat-icon:hover {
+    color: #FFFF00; /* Snapchat's brand colour code as of 08/04/2024 */
+}
+
+.mail-icon:hover {
     color: darkblue;
+}
+
+.whatsapp-icon:hover {
+    color: #25D366; /* Whatsapp's brand colour code as of 08/04/2024 */
 }
 
 .copyright p {
@@ -586,22 +595,27 @@ body, .container {
   padding: 60px 0;
 }
 
+#our-team {
+  margin: 30px;
+  padding: 30px;
+}
+
 .team-members {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .team-member {
-  flex-basis: calc(33.333% - 20px);
-  margin-bottom: 20px;
   text-align: center;
+  flex-basis: 30%;
 }
 
-.team-member img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%; /* Circular images for team members */
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .mission, .vision {
@@ -861,7 +875,7 @@ body, .container {
 
 
 .scroll-indicator {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -869,7 +883,7 @@ body, .container {
   justify-content: center;
   align-items: center;
   animation: bounce 2s infinite; /* Apply the bounce animation */
-  z-index: 100; /* Ensure it's visible above other content */
+  z-index: 1002; /* Ensure it's visible above other content */
 }
 
 .hide {
@@ -1039,6 +1053,40 @@ body, .container {
 
 /* || RESPONSIVE STYLES */
 @media (max-width: 768px) {
+
+  .banner::after {
+    display: none;
+  }
+  
+  .banner {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically in the container */
+    align-items: center; /* Center horizontally in the container */
+    height: 100vh; /* Make the banner at least the height of the viewport */
+  }
+
+  .banner-text {
+      text-align: center; /* Center align text for smaller screens */
+      position: static; /* Use static positioning for proper flexbox behavior */
+      margin: 20px; /* Add some space around the text box */
+      padding: 20px; /* Add padding inside the text box */
+      max-width: 90%; /* Max width to prevent it from stretching too far on small screens */
+      min-width: 250px; /* Minimum width to prevent excessive vertical stretching */
+  }
+
+  .banner-text h1,
+  .banner-text p {
+    align-self: center;
+      padding: 10px; /* Adjust padding for a better look */
+  }
+
+  .cta-button {
+      margin: 20px 0; /* Add vertical margin, remove horizontal margin */
+      align-self: center;
+      display: inline-block; /* Keep the button inline-block for the margin to work */
+  }
+
     .service-container {
         flex-direction: column;
         align-items: center;
