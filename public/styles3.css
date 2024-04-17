@@ -140,25 +140,34 @@ header a{
 .carousel .list .item .topic{
     color: goldenrod;
 }
-.carousel .list .item .buttons{
+.carousel .list .item .buttons {
     display: grid;
     grid-template-columns: repeat(2, 130px);
     grid-template-rows: 40px;
     gap: 5px;
     margin-top: 20px;
-}
-.carousel .list .item .buttons button{
+  }
+  
+  .carousel .list .item .buttons button,
+  .carousel .list .item .buttons .contact-btn {
     border: none;
     background-color: #eee;
     letter-spacing: 3px;
     font-family: Poppins;
     font-weight: 500;
-}
-.carousel .list .item .buttons button:nth-child(2){
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel .list .item .buttons .contact-btn {
     background-color: transparent;
     border: 1px solid #fff;
     color: #eee;
-}
+  }
 /* thumbail */
 .thumbnail{
     position: absolute;
@@ -415,6 +424,101 @@ header a{
 	color: crimson;
 	background-color: #FFF;
 }
+/* Base modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    opacity: 0; /* Start with an opacity of 0 */
+    transition: opacity 0.4s ease; /* Animate opacity */
+  }
+  
+  /* Modal content box styling */
+  .modal-content {
+    position: relative;
+    background-color: #1a1a1a; /* Dark background color */
+    color: #fff; /* White text color */
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 40px;
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #ffd700; /* Gold border */
+    width: 50%; /* Half the width of window */
+    transition: transform 0.4s ease; /* Smooth transform */
+    transform: translateY(-50px); /* Start slightly above final position */
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); /* Gold shadow */
+  }
+  
+  /* Shining border effect */
+  .modal-content::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ffd700, #fff, #ffd700);
+    background-size: 400% 400%;
+    animation: shine 5s linear infinite;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  /* Show shining border when modal is visible */
+  .modal:target .modal-content::before {
+    opacity: 1;
+  }
+  
+  /* Shining border animation */
+  @keyframes shine {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Modal title styling */
+  .modal-content h2 {
+    color: #ffd700; /* Gold color for the title */
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Modal text styling */
+  .modal-content p {
+    color: #fff; /* White text color */
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Close button styling */
+  .close {
+    color: #ffd700; /* Gold color for close button */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #fff; /* White color on hover/focus */
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
 @keyframes contentOut{
     to{
         transform: translateY(-150px);

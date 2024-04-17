@@ -47,3 +47,28 @@ function showSlider(type){
         next.click();
     }, timeAutoNext)
 }
+  
+  function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+    modal.style.opacity = 0;
+    setTimeout(function() {
+      modal.style.opacity = 1;
+    }, 10); // Start transition after a short delay to allow display style to apply
+  }
+  
+  function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.opacity = 0; // Begin fading out
+    setTimeout(function() {
+      modal.style.display = "none";
+    }, 400); // Match this delay to CSS transition duration
+  }
+  
+  // Close the modal if the user clicks outside of the modal content
+  window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+      closeModal(event.target.id);
+    }
+  }
+  

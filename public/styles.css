@@ -252,6 +252,7 @@ nav h1 span {
   color: white; /* Text color */
   z-index: 10; /* Ensure it's above the overlay and video */
   padding: 0 20px; /* Right padding might need adjustment */
+  text-align: center;
 }
 
 .banner {
@@ -319,7 +320,7 @@ body, .container {
 }
 
 .banner-text {
-    text-align: right;
+    text-align: center;
     padding: 40px; /* Increased padding within the banner content */
     margin: 20px auto;
     max-width: 600px;
