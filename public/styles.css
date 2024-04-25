@@ -12,6 +12,7 @@
   html, body {
     height: 100%;
     overflow-x: hidden;
+    background-color: #000;
   }
 
   body {
@@ -38,7 +39,7 @@
 nav {
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index:99999999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -177,6 +178,7 @@ nav h1 span {
 /* Content styles */
 #content {
   display: none;
+  
 }
 
 /* Animations */
@@ -203,8 +205,9 @@ nav h1 span {
   margin-top: 50px;
 }
 .services-list div{
-  background-color: #ffffff;
+  background-color: black;
   padding: 40px;
+  color: white;
   font-size: 13px;
   font-weight: 300;
   border-radius: 10px;
@@ -327,8 +330,6 @@ nav h1 span {
 
 
 
-
-
 #AutoSlider {
   position: relative;
   width: 100%;
@@ -406,7 +407,7 @@ body, .container {
 
 #why-choose-us, #our-services, #AutoSlider{
     text-align: center;
-    background-color: #f0f0f0; /* Soft background color */
+    background-color: #3c3c3c; /* Soft background color */
     padding: 40px 20px;
     border-radius: 8px;
     margin: 20px;
@@ -416,8 +417,8 @@ body, .container {
 
 #why-choose-us h1, #our-services h1, #AutoSlider h1 {
   font-size: 48px;
+  color: white;
 }
-
 
 
 
@@ -470,6 +471,32 @@ body, .container {
   max-width: 600px;
   margin: auto;
   margin-bottom: 50px;
+}
+#mission-statement,
+#our-history,
+#hero-section {
+  background-color: #333;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+#mission-statement h2,
+#our-history h2,
+#hero-section h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#mission-statement p,
+#our-history p,
+#hero-section p {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .image-gallery {
@@ -852,23 +879,63 @@ form input[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
-    .content-flex {
-        flex-direction: column;
-    }
+  .content-flex {
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+  }
 
-    .contact-form, .contact-items {
-        width: 100%; /* Makes each element take full width on smaller screens */
-    }
+  .contact-items,
+  .contact-form {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px; /* Add space between items */
+  }
+
+  .separator {
+    display: none; /* Hide separator on smaller screens */
+  }
+
+  .contact-item {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add space between items */
+  }
+
+  .contact-form {
+    padding: 20px; /* Add padding inside the contact form */
+    background-color: #f0f0f0; /* Light gray background */
+    border-radius: 5px; /* Optional: rounds the corners of the contact form */
+  }
+
+  form label,
+  form input,
+  form textarea {
+    width: 100%; /* Make form elements take full width */
+    margin-bottom: 10px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  form input[type="submit"] {
+    width: 100%; /* Make submit button take full width */
+  }
 }
+
 
 
 /* || FOOTER STYLES */
 .footer {
-    background-color: #fff;
+    background-color: black;
     padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
 }
 
 .row {
@@ -881,7 +948,7 @@ form input[type="submit"]:hover {
 }
 
 .social-icons a {
-    color: black;
+    color: white;
     font-size: 30px;
     margin: 0 10px;
     transition: color 0.3s ease;
@@ -902,22 +969,22 @@ form input[type="submit"]:hover {
 .copyright p {
     font-size: 14px;
     font-weight: 300;
-    color: #000;
+    color: white;
 }
 
 .copyright a {
-    color: black;
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .copyright a:hover {
-    color: darkblue;
+    color: white;
     text-decoration: underline;
 }
 
 #services {
-  background-color: #f0f0f0; /* Apply the grey background to both services and products */
+   /* Apply the grey background to both services and products */
   padding: 30px 0;
 }
 
@@ -1133,14 +1200,6 @@ form input[type="submit"]:hover {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #333;
-}
-
-.testimonial {
-  font-style: italic;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .testimonial p {

@@ -96,15 +96,34 @@ header a{
     margin-right: 40px;
 }
 
-/* carousel */
-.carousel{
+.des {
+    position: relative; /* Ensure position relative for z-index to work */
+    z-index: 2; /* Set z-index higher than the overlay */
+  }
+  
+  .overlay-container {
     height: 100vh;
     margin-top: -50px;
     width: 100vw;
     overflow: hidden;
     position: relative;
-}
-.carousel .list .item{
+  }
+  
+  .overlay-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Set a z-index value for the overlay */
+    transition: all 0.5s ease;
+    transition-delay: 0.2s;
+  }
+  
+
+  .carousel .list .item{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -311,11 +330,11 @@ header a{
     }
 }
 
-/* running time */
+
 
 .carousel .time{
     position: absolute;
-    z-index: 1000;
+    z-index: 300;
     width: 0%;
     height: 3px;
     background-color: #f1683a;
@@ -518,6 +537,74 @@ header a{
     text-decoration: none;
     cursor: pointer;
   }
+
+
+/* || FOOTER STYLES */
+.footer {
+    background-color: #fff;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    margin: 10px 0px;
+}
+
+.social-icons a {
+    color: black;
+    font-size: 30px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.snapchat-icon:hover {
+    color: #FFFF00; /* Snapchat's brand colour code as of 08/04/2024 */
+}
+
+.mail-icon:hover {
+    color: darkblue;
+}
+
+.whatsapp-icon:hover {
+    color: #25D366; /* Whatsapp's brand colour code as of 08/04/2024 */
+}
+
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+}
+
+.copyright a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.copyright a:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+#services {
+  background-color: #f0f0f0; /* Apply the grey background to both services and products */
+  padding: 30px 0;
+}
+
+/* running time */
+.author .title .topic .des {
+    z-index: 900000;
+  }
+
+/* Ensure the rest of your CSS is correctly targeting elements within #products as well */
+
   
 @keyframes contentOut{
     to{
