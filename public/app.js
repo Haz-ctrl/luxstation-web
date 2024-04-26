@@ -56,8 +56,7 @@ function showSlider(type){
       modal.style.opacity = 1;
     }, 10); // Start transition after a short delay to allow display style to apply
   }
-  
-  function closeModal(modalId) {
+  function closeModal(modalId, event) {
     console.log(modalId);
     var modal = document.getElementById(modalId);
     modal.style.opacity = 0; // Begin fading out
@@ -66,6 +65,8 @@ function showSlider(type){
     }, 400); // Match this delay to CSS transition duration
   }
   
+  
+  
   // Close the modal if the user clicks outside of the modal content
   window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
@@ -73,22 +74,3 @@ function showSlider(type){
       console.log(event.target.id);
     }
   }
-  
-  window.onload = function() {
-    var titles = document.querySelectorAll('.title');
-    titles.forEach(function(title) {
-      title.style.position = 'relative';
-      title.style.zIndex = '50505050';
-    });
-  }
-
-// Get the title element
-const titleElement = document.querySelector('.title');
-
-// Get the computed background color of the parent element
-const backgroundColor = window.getComputedStyle(titleElement.parentElement).backgroundColor;
-
-// Check if the background color is white
-if (backgroundColor === 'rgb(255, 255, 255)') {
-  titleElement.classList.add('inverted');
-}

@@ -47,8 +47,6 @@
             <div class="author">LUX STATION</div>
             <div class="title">Night Life</div>
             <div class="topic">VIP</div>
-            <div class="des">
-              Experience the ultimate nightlife with Lux Station. From VIP table reservations to guest list access, we'll handle everything for your perfect night out. Contact us now to turn your nightlife dreams into reality.</div>
             <div class="buttons">
               <button onclick="openModal('nightlifeModal')">SEE MORE</button>
               <a href="contact.html" class="contact-btn">Contact Us</a>
@@ -61,7 +59,6 @@
             <div class="author">LUX STATION</div>
             <div class="title">Sourcing Watches</div>
             <div class="topic">VIP</div>
-            <div class="des"> Looking for that perfect timepiece to add to your collection? Our experts can source rare and sought after watches, guiding you through the process with their extensive knowledge. </div>
             <div class="buttons">
               <button onclick="openModal('watchModal')">SEE MORE</button>
               <a href="contact.html" class="contact-btn">Contact Us</a>
@@ -74,7 +71,6 @@
             <div class="author">LUX STATION</div>
             <div class="title">Event Tickets</div>
             <div class="topic">VIP</div>
-            <div class="des"> Don't miss out on your favourite concerts, sporting events, or theater performances. We have access to exclusive tickets and can secure the best seats in the house for you. </div>
             <div class="buttons">
               <button onclick="openModal('eventsModal')">SEE MORE</button>
               <a href="contact.html" class="contact-btn">Contact Us</a>
@@ -87,7 +83,6 @@
             <div class="author">LUX STATION</div>
             <div class="title">Personal Shopping</div>
             <div class="topic">VIP</div>
-            <div class="des"> Need assistance with finding the perfect outfit, accessories, or gifts? Our dedicated personal shoppers have an eye for style and a knack for finding unique and exquisite items. </div>
             <div class="buttons">
               <button onclick="openModal('personalShoppingModal')">SEE MORE</button>
               <a href="contact.html" class="contact-btn">Contact Us</a>
@@ -100,7 +95,6 @@
             <div class="author">LUX STATION</div>
             <div class="title">Holiday</div>
             <div class="topic">VIP</div>
-            <div class="des"> Planning the perfect getaway can be time consuming. Let us take care of it for you! We offer tailored holiday packages that cater to your desires, ensuring a memorable and stress free vacation. </div>
             <div class="buttons">
               <button onclick="openModal('holidayModal')">SEE MORE</button>
               <a href="contact.html" class="contact-btn">Contact Us</a>
@@ -113,7 +107,6 @@
             <div class="author">LUX STATION</div>
             <div class="title">Rentals</div>
             <div class="topic">VIP</div>
-            <div class="des"> Whether you're looking for a luxurious vacation home, a sleek sports car, or high end equipment, we have a wide selection of rentals to suit your preferences. </div>
             <div class="buttons">
               <button onclick="openModal('rentalsModal')">SEE MORE</button>
               <a href="contact.html" class="contact-btn">Contact Us</a>
@@ -126,12 +119,7 @@
             <div class="author">LUX STATION</div>
             <div class="title">Private Dining</div>
             <div class="topic">VIP</div>
-            <div class="des">Whether it's an intimate dinner for two or a large celebration, we can secure exclusive reservations at the finest restaurants, ensuring a memorable dining experience.</div>
             <!-- Hidden More Content -->
-            <div class="more-content" style="display: none;">
-              <img src="./assets/img/Additional_Image_Private_Dining.jpeg">
-              <p>Enjoy personalized menus and dedicated staff to cater to every detail of your dining experience.</p>
-            </div>
             <div class="buttons">
               <button onclick="openModal('privateDiningModal')">SEE MORE</button>
               <a href="contact.html" class="contact-btn">Contact Us</a>
@@ -144,7 +132,6 @@
             <div class="author">LUX STATION</div>
             <div class="title">Private Jets</div>
             <div class="topic">VIP</div>
-            <div class="des"> Experience the ultimate luxury and convinience of private jet travel. Our team will handle all the arrangements, allowing you to enjoy a seamless and comfortable journey. </div>
             <div class="buttons">
               <button onclick="openModal('jetsModal')">SEE MORE</button>
               <a href="contact.html" class="contact-btn">Contact Us</a>
@@ -157,7 +144,6 @@
             <div class="author">LUX STATION</div>
             <div class="title">Airport Transfers</div>
             <div class="topic">VIP</div>
-            <div class="des"> Arrive at your destination in style and comfort with our reliable and professional airport transfer services. We'll ensure a smooth transition from airport to your accommodation. </div>
             <div class="buttons">
               <button onclick="openModal('airportTransfersModal')">SEE MORE</button>
               <a href="contact.html" class="contact-btn">Contact Us</a>
@@ -242,7 +228,7 @@
       <!-- Watch Sourcing Modal -->
       <div id="watchModal" class="modal">
         <div class="modal-content">
-          <span class="close" onclick="closeModal('watchModal')">&times;</span>
+          <button class="close" onclick="closeModal('watchModal', event)">x</button>
           <h2>Sourcing Watches</h2>
           <p> We have a wide network of trusted suppliers and can find even the most elusive timepieces. Whether you're searching for a vintage Rolex or the latest limited edition from a top brand, we'll help you acquire your dream watch. Our expert team will guide you through the entire process, from locating the perfect timepiece to ensuring its authenticity and arranging secure delivery. </p>
         </div>
@@ -250,7 +236,7 @@
       <!-- Event Tickets Modal -->
       <div id="nightlifeModal" class="modal">
         <div class="modal-content">
-          <span class="close" onclick="closeModal('nightlifeModal')">&times;</span>
+          <button class="close" onclick="closeModal('nightlifeModal', event)">&times;</button>
           <h2>Night Life</h2>
           <p> Let us handle all the details for your stress-free night out at the top clubs in the UK. Whether it's a last-minute plan or a carefully planned night, we can ensure you have a fantastic time at venues like Libertine, Tape, Chinawhite, Club Liv or Cirque le Soir. From VIP tables to guestlist entry and bottle service, we'll take care of everything so you can simply show up and enjoy the party. Contact us to arrange your night out at the hottest clubs in London, Manchester or Birmingham.</p>
         </div>
@@ -258,7 +244,7 @@
       <!-- Private Jets Modal -->
       <div id="jetsModal" class="modal">
         <div class="modal-content">
-          <span class="close" onclick="closeModal('jetsModal')">&times;</span>
+          <button class="close" onclick="closeModal('jetsModal', event)">&times;</button>
           <h2>Private Jets</h2>
           <p> From short hops to international flights, our private jet service ensures you travel in style and privacy. Our fleet of well-maintained aircraft includes a range of options to suit your needs, from light jets for regional travel to luxurious long-range jets for intercontinental journeys. Our experienced crew and concierge team will take care of every detail, ensuring a seamless and enjoyable travel experience. </p>
         </div>
@@ -266,32 +252,18 @@
       <!-- Watch Sourcing Modal -->
       <div id="personalShoppingModal" class="modal">
         <div class="modal-content">
-          <span class="close" onclick="closeModal('personalShoppingModal')">&times;</span>
+          <button class="close" onclick="closeModal('personalShoppingModal', event)">&times;</button>
           <h2>Personal Shopping</h2>
           <p> Elevate your style with our team of fashion experts who have access to an exclusive selection of designer pieces from top brands in the industry. Whether you're searching for a show-stopping outfit for a special event or simply want to update your wardrobe with the latest trends, we have you covered. From iconic fashion houses to emerging designers, our network allows us to source both new and old season pieces that will make you stand out from the crowd. Let our team assist you in finding the perfect statement piece that will elevate your style and leave a lasting impression. Discover the world of luxury fashion with our team of experts who are dedicated to helping you find the perfect pieces for any occasion. Contact us today to start shopping for your next fashion statement and elevate your wardrobe to new heights. </p>
         </div>
       </div>
       </section>
-      <section id="call-to-action">
-        <h3>Experience the Unmatched</h3>
-        <p>Contact us today to discover how we can enhance your lifestyle with our unparalleled concierge services.</p>
-        <a href="contact.html" class="cta-button">Get in Touch</a>
-      </section>
-      </main>
-      <footer>
-        <footer class="footer">
-          <div class="social-icons">
-            <a href="" target="_blank" class="icon">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="" class="icon">
-              <i class="fas fa-envelope"></i>
-            </a>
+
           </div>
           <!-- Private Jets Modal -->
           <div id="rentalsModal" class="modal">
             <div class="modal-content">
-              <span class="close" onclick="closeModal('rentalsModal')">&times;</span>
+              <button class="close" onclick="closeModal('rentalsModal', event)">&times;</button>
               <h2>Rentals</h2>
               <p> Experience luxury and comfort like never before with our premium selection of vehicles for your transportation needs. From Mercedes to Lamborghini, our fleet is equipped with the latest amenities to ensure that your ride is always enjoyable and stylish. Whether you need a vehicle for short-term rentals or long-term leases, we have the perfect option for you. Our luxury vehicles come with professional chauffeurs to provide you with a seamless and stress-free experience. And if security is a concern, we also offer security services to ensure your safety and peace of mind. Arrive in style and make a statement wherever you go with Lux Station. Contact us today to book your luxury vehicle and elevate your transportation experience to a whole new level. </p>
             </div>
@@ -299,7 +271,7 @@
           <!-- Watch Sourcing Modal -->
           <div id="privateDiningModal" class="modal">
             <div class="modal-content">
-              <span class="close" onclick="closeModal('privateDiningModal')">&times;</span>
+              <button class="close" onclick="closeModal('privateDiningModal', event)">&times;</button>
               <h2>Private Dining </h2>
               <p> Indulge in luxury with access to some of the finest dining experiences the UK has to offer. Make reservations at restaurants such as sumosan, Novikov, Hakkasan, Nobu and much more. Picture yourself being pampered with a multi-course meal featuring exquisite flavors and textures, carefully crafted by some of the world's most renowned chefs. From Michelin-starred restaurants to hidden gems tucked away in quaint corners of the city, our network of dining partners will ensure that you have access to the best of the best. </p>
             </div>
@@ -307,7 +279,7 @@
           <!-- Event Tickets Modal -->
           <div id="jetsModal" class="modal">
             <div class="modal-content">
-              <span class="close" onclick="closeModal('jetsModal')">&times;</span>
+              <button class="close" onclick="closeModal('jetsModal', event)">&times;</button>
               <h2>Private Jets</h2>
               <p> From sold-out shows to VIP packages, we'll make sure you have an unforgettable time at the events you love. Our extensive connections in the entertainment industry allow us to secure exclusive tickets and access to the most sought-after events worldwide. Let us take care of the details while you sit back and enjoy the show. </p>
             </div>
@@ -315,7 +287,7 @@
           <!-- Private Jets Modal -->
           <div id="airportTransfersModal" class="modal">
             <div class="modal-content">
-              <span class="close" onclick="closeModal('airportTransfersModal')">&times;</span>
+              <button class="close" onclick="closeModal('airportTransfersModal', event)">&times;</button>
               <h2>Private Jets</h2>
               <p> Experience luxury and comfort like never before with our premium selection of vehicles for your transportation needs. From Mercedes to Lamborghini, our fleet is equipped with the latest amenities to ensure that your ride is always enjoyable and stylish. Whether you need a vehicle for short-term rentals or long-term leases, we have the perfect option for you. Our luxury vehicles come with professional chauffeurs to provide you with a seamless and stress-free experience. And if security is a concern, we also offer security services to ensure your safety and peace of mind. Arrive in style and make a statement wherever you go with Lux Station. Contact us today to book your luxury vehicle and elevate your transportation experience to a whole new level. </p>
             </div>
@@ -348,6 +320,6 @@
       </div>
     </footer>
   </body>
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 
 </html>

@@ -6,6 +6,7 @@ body{
     font-family: Poppins;
     font-size: 12px;
     overflow: hidden;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -21,6 +22,8 @@ nav {
     background-color: rgba(0, 0, 0, 0.5);
     color: #FFF;
     padding: 1rem 1.5rem;
+    width: 100%;
+    height: auto;
   }
   
   nav h1 {
@@ -408,7 +411,7 @@ header a{
 }
 .carousel.next .arrows button,
 .carousel.prev .arrows button{
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 .carousel.prev .list .item:nth-child(2) .content .author,
 .carousel.prev .list .item:nth-child(2) .content .title,
@@ -550,12 +553,10 @@ header a{
   
   /* Close button styling */
   .close {
-    pointer-events: auto;
     color: #ffd700; /* Gold color for close button */
     float: right;
     font-size: 28px;
     font-weight: bold;
-    cursor: pointer;
     transition: color 0.4s ease;
     background-color: transparent;
     z-index: 56565;
@@ -565,7 +566,6 @@ header a{
   .close:focus {
     color: #fff; /* White color on hover/focus */
     text-decoration: none;
-    cursor: pointer;
   }
 
 
