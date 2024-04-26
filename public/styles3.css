@@ -101,27 +101,26 @@ header a{
     z-index: 2; /* Set z-index higher than the overlay */
   }
   
-  .overlay-container {
-    height: 100vh;
-    margin-top: -50px;
-    width: 100vw;
-    overflow: hidden;
+
+.item {
     position: relative;
-  }
-  
-  .overlay-container::after {
-    content: '';
+}
+.item::before {
+    content: "";
     position: absolute;
     top: 0;
-    bottom: 0;
-    right: 0;
+    left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1; /* Set a z-index value for the overlay */
-    transition: all 0.5s ease;
-    transition-delay: 0.2s;
-  }
-  
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05); /* Black overlay with 50% opacity */
+    z-index: 1;
+    pointer-events: none; /* Ensure the overlay is not clickable */
+}
+
+.title {
+    position: relative; /* Change this from static to relative */
+    z-index: 4;
+}
 
   .carousel .list .item{
     width: 100%;

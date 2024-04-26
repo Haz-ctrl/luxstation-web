@@ -72,3 +72,10 @@ function showSlider(type){
     }
   }
   
+  window.onload = function() {
+    var titles = document.querySelectorAll('.title');
+    titles.forEach(function(title) {
+      title.style.position = 'relative';
+      title.style.zIndex = '50505050';
+    });
+  }

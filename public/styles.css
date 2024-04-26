@@ -171,8 +171,14 @@ nav h1 span {
 
 #logo {
   /* Adjust size as needed */
-  width: 120px;
+  width: 550px;
   height: auto;
+}
+
+#aboutLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Content styles */
@@ -270,6 +276,7 @@ nav h1 span {
 .mobile-menu.is-open {
 	opacity: 1;
 	transform: translateY(0);
+  z-index: 99999999;
 }
 
 .mobile-menu a {
@@ -295,15 +302,12 @@ nav h1 span {
   display: flex;
   flex-direction: column; /* Stacks items vertically */
   justify-content: center; /* Centers content vertically in the available height */
-  align-items: flex-end; /* Aligns text to the right */
   width: 33.33%; /* Matches the width of the dark overlay */
   color: white; /* Text color */
   z-index: 10; /* Ensure it's above the overlay and video */
   padding: 0 20px; /* Right padding might need adjustment */
   text-align: center;
-}
-
-.banner {
+  font-family: 'Trajan Pro', 'Times New Roman', serif;  }  .banner {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -368,16 +372,19 @@ body, .container {
 .banner-text {
     text-align: center;
     padding: 40px; /* Increased padding within the banner content */
-    margin: 20px auto;
+    /* margin: 20px auto; */
     max-width: 600px;
     position: absolute;
     z-index: 1001;
 }
 
 .banner-text h1 {
-    font-size: 36px;
-    font-weight: bold;
-    padding: 4px; /* Adjust padding as needed */
+  font-size: 36px;
+  font-weight: bold;
+  padding: 4px; /* Adjust padding as needed */
+  justify-content: center;
+  display: flex;
+  align-items: center; /* Add this line */
 }
 
 .banner-text p {
