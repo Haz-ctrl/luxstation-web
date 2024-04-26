@@ -58,6 +58,7 @@ function showSlider(type){
   }
   
   function closeModal(modalId) {
+    console.log(modalId);
     var modal = document.getElementById(modalId);
     modal.style.opacity = 0; // Begin fading out
     setTimeout(function() {
@@ -69,6 +70,7 @@ function showSlider(type){
   window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
       closeModal(event.target.id);
+      console.log(event.target.id);
     }
   }
   
@@ -79,3 +81,14 @@ function showSlider(type){
       title.style.zIndex = '50505050';
     });
   }
+
+// Get the title element
+const titleElement = document.querySelector('.title');
+
+// Get the computed background color of the parent element
+const backgroundColor = window.getComputedStyle(titleElement.parentElement).backgroundColor;
+
+// Check if the background color is white
+if (backgroundColor === 'rgb(255, 255, 255)') {
+  titleElement.classList.add('inverted');
+}
