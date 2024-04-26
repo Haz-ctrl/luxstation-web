@@ -101,9 +101,13 @@ header a{
     z-index: 2; /* Set z-index higher than the overlay */
     color: white;
     font-size: 24px;
-    outline:#000;
-
-}
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+  }
+  
+  .des.inverted {
+    color: black;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; /* White outline */
+  }
 
 
 .author .title .des {
@@ -205,7 +209,7 @@ header a{
   }
   
   .carousel .list .item .buttons .contact-btn {
-    background-color: transparent;
+    background-color: black !important;
     border: 1px solid #fff;
     color: #eee;
   }
