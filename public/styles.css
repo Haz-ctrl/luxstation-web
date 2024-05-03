@@ -1563,6 +1563,14 @@ form input[type="submit"]:hover {
 
 .service-detail p {
   text-align: justify; /* Justify align paragraph */
+  margin-bottom: 15px;
+}
+
+.service-detail img {
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove default inline display */
+  margin: 0 auto; /* Center image horizontally */
 }
 
 /* || RESPONSIVE STYLES */
@@ -1678,6 +1686,7 @@ form input[type="submit"]:hover {
     }
 
     .service-detail {
+      max-width: 90%;
       margin: 20px auto; /* Adjust margin for smaller screens */
     }
 }

@@ -172,6 +172,7 @@ header a{
     left: 50%;
     transform: translateX(-50%);
     padding-right: 30%;
+    padding: 20px;
     box-sizing: border-box;
     color: #fff;
     text-shadow: 0 5px 10px #0004;
@@ -644,7 +645,7 @@ header a{
     }
 }
 @media screen and (max-width: 768px) {
-    .item {
+    .list .item {
         margin-bottom: 30px;
     }
     .carousel .list .item .content{

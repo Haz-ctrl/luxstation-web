@@ -34,6 +34,7 @@
         <div class="service-detail">
             <h1>Service Name</h1>
             <p style="color: white;">Service Description</p>
+            <img src="imagepath.jpg" alt="Service image">
         </div>
     </main>
 
@@ -56,6 +57,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script>
         // Get the service name from the query parameter
         const queryString = window.location.search;
@@ -66,39 +68,48 @@
         const serviceDetails = {
             'service1': {
                 name: 'Night Life',
-                description: "Let us handle all the details for your stress-free night out at the top clubs in the UK. Whether it's a last-minute plan or a carefully planned night, we can ensure you have a fantastic time at venues like Libertine, Tape, Chinawhite, Club Liv or Cirque le Soir. From VIP tables to guestlist entry and bottle service, we'll take care of everything so you can simply show up and enjoy the party. Contact us to arrange your night out at the hottest clubs in London, Manchester or Birmingham."
+                description: "Let us handle all the details for your stress-free night out at the top clubs in the UK. Whether it's a last-minute plan or a carefully planned night, we can ensure you have a fantastic time at venues like Libertine, Tape, Chinawhite, Club Liv or Cirque le Soir. From VIP tables to guestlist entry and bottle service, we'll take care of everything so you can simply show up and enjoy the party. Contact us to arrange your night out at the hottest clubs in London, Manchester or Birmingham.",
+                imagepath: "./assets/img/NightLife.jpeg"
             },
             'service2': {
                 name: 'Sourcing Watches',
-                description: "We have a wide network of trusted suppliers and can find even the most elusive timepieces. Whether you're searching for a vintage Rolex or the latest limited edition from a top brand, we'll help you acquire your dream watch. Our expert team will guide you through the entire process, from locating the perfect timepiece to ensuring its authenticity and arranging secure delivery."
+                description: "We have a wide network of trusted suppliers and can find even the most elusive timepieces. Whether you're searching for a vintage Rolex or the latest limited edition from a top brand, we'll help you acquire your dream watch. Our expert team will guide you through the entire process, from locating the perfect timepiece to ensuring its authenticity and arranging secure delivery.",
+                imagepath: "./assets/img/WatchSource.jpg"
             },
             'service3': {
                 name: 'Event Tickets',
-                description: "From sold-out shows to VIP packages, we'll make sure you have an unforgettable time at the events you love. Our extensive connections in the entertainment industry allow us to secure exclusive tickets and access to the most sought-after events worldwide. Let us take care of the details while you sit back and enjoy the show."
+                description: "From sold-out shows to VIP packages, we'll make sure you have an unforgettable time at the events you love. Our extensive connections in the entertainment industry allow us to secure exclusive tickets and access to the most sought-after events worldwide. Let us take care of the details while you sit back and enjoy the show.",
+                imagepath: "./assets/img/Event Tickets.png"
             },
             'service4': {
                 name: 'Personal Shopping',
-                description: "Elevate your style with our team of fashion experts who have access to an exclusive selection of designer pieces from top brands in the industry. Whether you're searching for a show-stopping outfit for a special event or simply want to update your wardrobe with the latest trends, we have you covered. From iconic fashion houses to emerging designers, our network allows us to source both new and old season pieces that will make you stand out from the crowd. Let our team assist you in finding the perfect statement piece that will elevate your style and leave a lasting impression. Discover the world of luxury fashion with our team of experts who are dedicated to helping you find the perfect pieces for any occasion. Contact us today to start shopping for your next fashion statement and elevate your wardrobe to new heights."
+                description: "Elevate your style with our team of fashion experts who have access to an exclusive selection of designer pieces from top brands in the industry. Whether you're searching for a show-stopping outfit for a special event or simply want to update your wardrobe with the latest trends, we have you covered. From iconic fashion houses to emerging designers, our network allows us to source both new and old season pieces that will make you stand out from the crowd. Let our team assist you in finding the perfect statement piece that will elevate your style and leave a lasting impression. Discover the world of luxury fashion with our team of experts who are dedicated to helping you find the perfect pieces for any occasion. Contact us today to start shopping for your next fashion statement and elevate your wardrobe to new heights.",
+                imagepath: "./assets/img/Personal Shopper.png"
             },
             'service5': {
                 name: 'Holiday',
-                description: "Planning the perfect getaway..."
+                description: "Planning the perfect getaway...",
+                imagepath: "./assets/img/Holiday.png"
             },
             'service6': {
                 name: 'Rentals',
-                description: "Experience luxury and comfort like never before with our premium selection of vehicles for your transportation needs. From Mercedes to Lamborghini, our fleet is equipped with the latest amenities to ensure that your ride is always enjoyable and stylish. Whether you need a vehicle for short-term rentals or long-term leases, we have the perfect option for you. Our luxury vehicles come with professional chauffeurs to provide you with a seamless and stress-free experience. And if security is a concern, we also offer security services to ensure your safety and peace of mind. Arrive in style and make a statement wherever you go with Lux Station. Contact us today to book your luxury vehicle and elevate your transportation experience to a whole new level."
+                description: "Experience luxury and comfort like never before with our premium selection of vehicles for your transportation needs. From Mercedes to Lamborghini, our fleet is equipped with the latest amenities to ensure that your ride is always enjoyable and stylish. Whether you need a vehicle for short-term rentals or long-term leases, we have the perfect option for you. Our luxury vehicles come with professional chauffeurs to provide you with a seamless and stress-free experience. And if security is a concern, we also offer security services to ensure your safety and peace of mind. Arrive in style and make a statement wherever you go with Lux Station. Contact us today to book your luxury vehicle and elevate your transportation experience to a whole new level.",
+                imagepath: "./assets/img/Rental.jpg"
             },
             'service7': {
                 name: 'Private Dining',
-                description: "Indulge in luxury with access to some of the finest dining experiences the UK has to offer. Make reservations at restaurants such as sumosan, Novikov, Hakkasan, Nobu and much more. Picture yourself being pampered with a multi-course meal featuring exquisite flavors and textures, carefully crafted by some of the world's most renowned chefs. From Michelin-starred restaurants to hidden gems tucked away in quaint corners of the city, our network of dining partners will ensure that you have access to the best of the best."
+                description: "Indulge in luxury with access to some of the finest dining experiences the UK has to offer. Make reservations at restaurants such as sumosan, Novikov, Hakkasan, Nobu and much more. Picture yourself being pampered with a multi-course meal featuring exquisite flavors and textures, carefully crafted by some of the world's most renowned chefs. From Michelin-starred restaurants to hidden gems tucked away in quaint corners of the city, our network of dining partners will ensure that you have access to the best of the best.",
+                imagepath: "./assets/img/Private Dining.jpeg"
             },
             'service8': {
                 name: 'Private Jets',
-                description: "From short hops to international flights, our private jet service ensures you travel in style and privacy. Our fleet of well-maintained aircraft includes a range of options to suit your needs, from light jets for regional travel to luxurious long-range jets for intercontinental journeys. Our experienced crew and concierge team will take care of every detail, ensuring a seamless and enjoyable travel experience."
+                description: "From short hops to international flights, our private jet service ensures you travel in style and privacy. Our fleet of well-maintained aircraft includes a range of options to suit your needs, from light jets for regional travel to luxurious long-range jets for intercontinental journeys. Our experienced crew and concierge team will take care of every detail, ensuring a seamless and enjoyable travel experience.",
+                imagepath: "./assets/img/Private Jet.jpeg"
             },
             'service9': {
                 name: 'Airport Transfers',
-                description: "Arrive at your destination..."
+                description: "Arrive at your destination...",
+                imagepath: "./assets/img/AirportTransferes.jpeg"
             }
         };
 
@@ -108,6 +119,8 @@
         // Populate the HTML elements with the retrieved service details
         document.querySelector('.service-detail h1').textContent = detail.name;
         document.querySelector('.service-detail p').textContent = detail.description;
+        document.querySelector('.service-detail img').src = detail.imagepath;
+        document.querySelector('.service-detail img').alt = detail.name;
     </script>
 </body>
 </html>
