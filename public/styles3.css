@@ -268,16 +268,16 @@ header a{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color: #fff;
     border: none;
-    color: #fff;
+    color: #000;
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
 }
 .arrows button:hover{
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
 }
 
 /* animation */
@@ -643,7 +643,10 @@ header a{
         opacity: 0;
     }
 }
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 768px) {
+    .item {
+        margin-bottom: 30px;
+    }
     .carousel .list .item .content{
         padding-right: 0;
     }

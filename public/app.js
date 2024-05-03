@@ -23,15 +23,17 @@ let runTimeOut;
 let runNextAuto = setTimeout(() => {
     next.click();
 }, timeAutoNext)
-function showSlider(type){
-    let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+
+// Function to show the slider
+function showSlider(type) {
+    let SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
     let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
     
-    if(type === 'next'){
+    if (type === 'next') {
         SliderDom.appendChild(SliderItemsDom[0]);
         thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
         carouselDom.classList.add('next');
-    }else{
+    } else {
         SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
         thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
         carouselDom.classList.add('prev');
@@ -45,32 +47,20 @@ function showSlider(type){
     clearTimeout(runNextAuto);
     runNextAuto = setTimeout(() => {
         next.click();
-    }, timeAutoNext)
+    }, timeAutoNext);
 }
-  
-  function openModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = "block";
-    modal.style.opacity = 0;
-    setTimeout(function() {
-      modal.style.opacity = 1;
-    }, 10); // Start transition after a short delay to allow display style to apply
-  }
-  function closeModal(modalId, event) {
-    console.log(modalId);
-    var modal = document.getElementById(modalId);
-    modal.style.opacity = 0; // Begin fading out
-    setTimeout(function() {
-      modal.style.display = "none";
-    }, 400); // Match this delay to CSS transition duration
-  }
-  
-  
-  
-  // Close the modal if the user clicks outside of the modal content
-  window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-      closeModal(event.target.id);
-      console.log(event.target.id);
-    }
-  }
+
+// Function to open service detail page
+function openServiceDetail(serviceName) {
+    // Navigate to the service detail page passing the service name as a query parameter
+    window.location.href = 'service_detail.html?service=' + serviceName;
+}
+
+// Event listeners for next and previous buttons
+nextDom.onclick = function() {
+    showSlider('next');    
+}
+
+prevDom.onclick = function() {
+    showSlider('prev');    
+}
