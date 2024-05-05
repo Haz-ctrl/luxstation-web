@@ -70,7 +70,7 @@
               </div>
               <div class="separator" style="border-left: 1px solid #ccc; height: 300px; margin: 0 40px;"></div>
               <div class="contact-form">
-                <form name="submit-to-google-sheet" onsubmit="handleSubmit()">
+                <form name="contact" onsubmit="handleSubmit()" method="POST" data-netlify="true">
                   <label style="color: white;" for="name">Name:</label>
                   <input type="text" id="name" name="name" placeholder="Name"/><br /><br />
                   <label style="color: white;" for="email">Email:</label>
@@ -81,12 +81,12 @@
                     <option value="nightlife">Night Life</option>
                     <option value="watches">Sourcing Watches</option>
                     <option value="events">Event Tickets</option>
-                    <option value="shopping">Personal Shopping</option>
+                    <option value="personalshopping">Personal Shopping</option>
                     <option value="holiday">Holiday</option>
                     <option value="rentals">Rentals</option>
-                    <option value="dining">Private Dining</option>
+                    <option value="privatedining">Private Dining</option>
                     <option value="privatejets">Private Jets</option>
-                    <option value="airport">Airport Transfers</option>
+                    <option value="airportTransfers">Airport Transfers</option>
                     <option value="other">Other</option>
                   </select>
                   <label style="color: white;" for="type">Message:</label>
@@ -117,9 +117,9 @@
       </div>
   </footer>
 
-  <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
   <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
 
   <script>
     function handleSubmit() {
@@ -132,15 +132,15 @@
       }, 5000); // 5000 milliseconds = 5 seconds
     }
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz87q2QiSlaUnqoexsSVX5ShIsDoKx7rVlisKXJbVsKAXG6GWgC3d3zYBaLrGMY_xvbJQ/exec';
-    const form = document.forms['submit-to-google-sheet']
+    // const scriptURL = 'https://script.google.com/macros/s/AKfycbz87q2QiSlaUnqoexsSVX5ShIsDoKx7rVlisKXJbVsKAXG6GWgC3d3zYBaLrGMY_xvbJQ/exec';
+    // const form = document.forms['submit-to-google-sheet']
 
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('ERROR!', error.message))
-    });
+    // form.addEventListener('submit', e => {
+    //   e.preventDefault()
+    //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    //     .then(response => console.log('Success!', response))
+    //     .catch(error => console.error('ERROR!', error.message))
+    // });
   </script>
   <script src="script.js"></script>
   </body>
