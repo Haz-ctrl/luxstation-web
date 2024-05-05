@@ -70,13 +70,13 @@
               </div>
               <div class="separator" style="border-left: 1px solid #ccc; height: 300px; margin: 0 40px;"></div>
               <div class="contact-form">
-                <form>
+                <form name="submit-to-google-sheet">
                   <label style="color: white;" for="name">Name:</label>
-                  <input type="text" id="name" name="name" placeholder="Enter name..." /><br /><br />
+                  <input type="text" id="name" name="name" placeholder="Name"/><br /><br />
                   <label style="color: white;" for="email">Email:</label>
-                  <input type="email" id="email" name="email" placeholder="Enter email..." /><br /><br />
+                  <input type="email" id="email" name="email" placeholder="Email" required/><br /><br />
                   <label style="color: white;" for="type">Service Enquiry:</label>
-                  <select id="service-enquiry" name="service-enquiry">
+                  <select id="service-enquiry" name="enquiry">
                     <option value="">Select an option</option>
                     <option value="nightlife">Night Life</option>
                     <option value="watches">Sourcing Watches</option>
@@ -117,6 +117,21 @@
       </div>
   </footer>
 
-    <script src="script.js"></script>
+  <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxUcBulN1XsdJ4JoYODNlMhXY9NHx2OjnmjvawLkbfzQZYTso-n4n64jbLyJ-ipCEvoKg/exec';
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('ERROR!', error.message))
+    });
+  </script>
+  <script src="script.js"></script>
   </body>
 </html>
